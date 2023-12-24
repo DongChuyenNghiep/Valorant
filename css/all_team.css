@@ -1,0 +1,844 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Nunito' !important;
+    font-size: 17px;
+    background-color: #08142c;
+    color: white;
+}
+
+div.all-team{
+    padding-top: 120px;
+    
+}
+section.info h2{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+div.rowbox{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 40px;
+    
+}
+div.box1{
+    margin-right: 20px;
+    background-color: white;
+}
+div.box1:last-child{
+    margin-right: 0px;
+}
+
+div.box{
+    border: 1px white solid;
+    width: 306px;
+    height:220px;
+}
+
+div.box img{
+margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: 220px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section.seed{
+    text-align: center;
+    color: white;
+    border-top: 1px white solid;
+    display: block;
+    width: 306px;
+    background-color: #08142c;
+    border: 1px solid white;
+}
+section.seed p{
+    justify-content: center;
+    padding-top: 10px;
+
+}
+div.image-logo:hover img{
+    display: none;
+
+}
+div.button-choose{
+    display: flex;
+    width: 100%;
+}
+
+div.table-player {
+    display: none;
+    overflow: hidden; /* Hide overflowing content */
+    transition: height 0.3s ease;
+
+}
+table.table-player{
+    background-color: #08142c;
+    border: 1px solid white;
+}
+table.table-player td p{
+    text-align: center;
+    margin: 0;  
+}
+
+div.image-logo:hover + div.table-player {
+    display: block; /* Show the table-player when hovering its preceding image-logo */
+
+    
+}
+td.name{
+    text-align: center;
+}
+@media screen and (max-width:1366px) and (min-width:768px){
+    div.image-logo {
+        width: 45%;
+        
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    div.table-player {
+        width: 54.4%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        width: 64.5% !important;
+        height: 70%;
+        margin: auto;
+        padding: 0;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+    div.table-player{
+        border-left: 1px solid white;
+    }
+    table{
+        height: 100%;
+    }
+    table td{
+        background-color: #08142c !important;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
+        
+    }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+
+
+}
+@media screen and (max-width:541px) and (min-width:424.98px){
+    section.seed p{
+        font-size: 16px;
+        padding-top: 8px;
+        margin-bottom: 10px;
+    }
+    div.image-logo {
+        width: 35.7%;
+        aspect-ratio: 1/1;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    div.table-player {
+        width: 63%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        height:102.51%;
+        aspect-ratio: 1/1;
+        padding: 0;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    table.table-player{
+        border: none;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+
+    table td{
+        background-color: #08142c !important;
+        font-size: 15.5px;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
+        
+    }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+    h2{
+        font-size: 25px;
+    }
+    section.seed{
+        border-top: none;
+    }
+
+}
+@media screen and (max-width:424.98px) and (min-width:413.98px) {
+    section.seed p{
+        font-size: 16px;
+        padding-top: 7px;
+        margin-bottom: 9px;
+    }
+    section.seed{
+        border-top: none;
+    }
+    div.image-logo {
+        width: 40%; 
+        padding: 0;
+        aspect-ratio: 1/1;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    div.table-player {
+        width: 60%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+        height: 151.85px;
+    }
+    table.table-player{
+        border: none;
+    }
+    
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        height: 100% !important;
+        aspect-ratio: 1/1;
+        padding: 0;
+    }
+    section.info h2{
+        font-size: 28px;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+    div.table-player{
+        border-left: 0.5px solid white;
+    }
+    table td{
+        background-color: #08142c !important;
+        font-size: 16.34px;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
+        
+    }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+    section.info h2{
+        font-size: 25px;
+    }
+
+}
+@media screen and (max-width:413.98px) and (min-width:391px) {
+    section.seed p{
+        font-size: 16px;
+        padding-top: 7px;
+        margin-bottom: 9px;
+    }
+    section.seed{
+        border-top: none;
+    }
+    div.image-logo {
+        width: 40%; 
+        padding: 0;
+        aspect-ratio: 1/1;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    div.table-player {
+        width: 58.7%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    table.table-player{
+        border: none;
+    }
+    
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        height: 103.33% !important;
+        aspect-ratio: 1/1;
+        padding: 0;
+    }
+    section.info h2{
+        font-size: 28px;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+    div.table-player{
+        border-left: 0.5px solid white;
+    }
+    table td{
+        background-color: #08142c !important;
+        font-size: 16.8px;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
+        
+    }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+    section.info h2{
+        font-size: 25px;
+    }
+
+}
+@media screen and (max-width:391px) and (min-width:376.98px) {
+    section.seed p{
+        font-size: 14px;
+        padding-top: 7px;
+        margin-bottom: 9px;
+    }
+    
+    div.image-logo {
+        width: 40%; 
+        aspect-ratio: 1/1;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    div.table-player {
+        width: 58.7%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    table.table-player{
+        border: none;
+    }
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        height: 102.47% !important;
+        aspect-ratio: 1/1;
+        padding: 0;
+    }
+    section.info h2{
+        font-size: 28px;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+        border-top: none;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+    
+    table td{
+        background-color: #08142c !important;
+        font-size: 15.75px;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
+        
+    }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+    section.info h2{
+        font-size: 25px;
+    }
+
+}
+@media screen and (max-width:376.98px) and (min-width:365.98px) {
+
+    section.seed p{
+        font-size: 14px;
+        padding-top: 7px;
+        margin-bottom: 9px;
+    }
+    
+    div.image-logo {
+        width: 40%; 
+        aspect-ratio: 1/1;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    section.seed{
+        border-top: none;
+    }
+    div.table-player {
+        width: 60%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+        height: 137.43px;
+    }
+    
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        height: 100% !important;
+        aspect-ratio: 1/1;
+        padding: 0;
+    }
+    section.info h2{
+        font-size: 28px;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+    table.table-player{
+        border: none;
+        
+    }
+    .table-player{
+        border-left: 0.5px solid white;
+    }
+
+    table td{
+        background-color: #08142c !important;
+        font-size: 86.727%;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
+        
+    }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+    section.info h2{
+        font-size: 25px;
+    }
+
+}
+@media screen and (max-width:365.98px) and (min-width:330px){
+    section.seed p{
+        font-size: 15px;
+        padding-top: 7px;
+        margin-bottom: 9px;
+    }
+    div.image-logo {
+        width: 38%; 
+        aspect-ratio: 1/1;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    section.seed{
+        border-top: none;
+    }
+    table.table-player{
+        border: none;
+        
+    }
+    .table-player{
+        border-left: 0.5px solid white;
+    }
+    div.table-player {
+        width: 62%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+        height: 125.24px;
+    }
+    
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        height: 100% !important;
+        aspect-ratio: 1/1;
+        padding: 0;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+    table td{
+        background-color: #08142c !important;
+        font-size: 13.5px;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
+        
+    }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+    section.info h2{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:330px) and (min-width:290px){
+    section.seed p{
+        font-size: 12.5px;
+        padding-top: 5px;
+        margin-bottom: 7px;
+    }
+    section.seed{
+        border-top: none;
+    }
+    div.image-logo {
+        width: 40%; 
+        aspect-ratio: 1/1;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    div.table-player {
+        width: 58.5%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    table.table-player{
+        border: none;
+    }
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        height: 103.05% !important;
+        aspect-ratio: 1/1;
+        padding: 0;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+
+    table td{
+        background-color: #08142c !important;
+        font-size: 12.87px;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
+        
+    }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+    section.info h2{
+        font-size: 22px;
+    }
+    
+}
+@media screen and (max-width:290px){
+    section.seed p{
+        font-size: 11.5px;
+        padding-top: 5px;
+        margin-bottom: 7px;
+    }
+    section.seed{
+        border-top: none;
+    }
+    div.image-logo {
+        width: 40%; 
+        aspect-ratio: 1/1;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    div.table-player {
+        width: 58.2%;
+        display: inline-block;
+        vertical-align: top; /* Align elements vertically */
+    }
+    
+    /* Additional styles for image inside image-logo */
+    div.image-logo img {
+        height: 104.01% !important;
+        aspect-ratio: 1/1;
+        padding: 0;
+    }
+    div.box1:last-child{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    table.table-player{
+        border: none;
+        border-left: 0.5px white solid;
+    }
+    /* Rest of your CSS styles */
+    div.rowbox {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+    }
+    section.seed{
+        margin: 0 auto;
+        width: 100%;
+    }
+    div.box1{
+        margin: 0 auto;
+        width: 92%;
+        margin-bottom: 20px;
+    }
+    div.box {
+        margin: 0 auto;
+        width: 100%;
+        height: 90%;
+    }
+    table td{
+        background-color: #08142c !important;
+        font-size: 11.3px;
+    }
+    div.button-choose{
+        display: flex;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+    }
+    div.image-logo:hover + div.table-player {
+        display: inline-block; /* Show the table-player when hovering its preceding image-logo */
+        
+    }
+    div.image-logo:hover img{
+        display: block;
+    
+    }
+    section.info h2{
+        font-size: 18px;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+}
