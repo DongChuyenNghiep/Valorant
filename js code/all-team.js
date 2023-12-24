@@ -13,7 +13,6 @@ fetch(FULL_URL_TABLE)
 
             // Assuming rowData[0] corresponds to the image URL
             let imageSrc = data.table.rows[2].c[k].v;
-            console.log(imageSrc)
             // Regular expression to extract the ID from the image source URL
             const regex = /\/d\/(.+?)\/view/;
 
