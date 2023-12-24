@@ -5,7 +5,7 @@
 
 body{
     font-family: 'Nunito' !important;
-    font-size: 17px;
+    font-size: 19px;
     background-color: #08142c;
     color: white;
 }
@@ -84,7 +84,7 @@ div.table-player {
 }
 table.table-player{
     background-color: #08142c;
-    border: 1px solid white;
+    border-bottom: 0.5px solid white;
 }
 table.table-player td p{
     text-align: center;
@@ -173,27 +173,37 @@ td.name{
 
 }
 @media screen and (max-width:541px) and (min-width:424.98px){
+    div.all-team img.rank-icon{
+        height: 29.18px;
+        padding: 2px 0;
+        text-align: right;
+        margin: 0 auto;
+    }
     section.seed p{
         font-size: 16px;
         padding-top: 8px;
         margin-bottom: 10px;
     }
     div.image-logo {
-        width: 35.7%;
+        width: 38%;
         aspect-ratio: 1/1;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
     
     div.table-player {
-        width: 63%;
+        width: 62%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
+        border-left: 0.5px white solid;
+        height: 149.85px;
     }
-    
+    td:nth-child(1),td:nth-child(2){
+        padding: 0;
+    }
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height:102.51%;
+        height:100%;
         aspect-ratio: 1/1;
         padding: 0;
     }
@@ -228,7 +238,7 @@ td.name{
 
     table td{
         background-color: #08142c !important;
-        font-size: 15.5px;
+        font-size: 18px;
     }
     div.button-choose{
         display: flex;
@@ -269,7 +279,7 @@ td.name{
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
-    td:nth-child(1){
+    td:nth-child(1),td:nth-child(2){
         padding: 0;
     }
     div.table-player {
@@ -366,17 +376,23 @@ td.name{
     }
     
     div.table-player {
-        width: 58.7%;
+        width: 60%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
+        height: 150.98px;
     }
     table.table-player{
         border: none;
     }
-    
+    div.all-team img.rank-icon{
+        height: 29.4px;
+        padding: 2px 0;
+        text-align: right;
+        margin: 0 auto;
+    }
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height: 103.33% !important;
+        height: 100% !important;
         aspect-ratio: 1/1;
         padding: 0;
     }
@@ -443,25 +459,36 @@ td.name{
     }
     
     div.image-logo {
-        width: 40%; 
+        width: 41%; 
         aspect-ratio: 1/1;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
     
-    div.table-player {
-        width: 58.7%;
+    div.table-player{
+        width: 59%;
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
+        border-left: 0.5px solid white;
+        height: 146.6px;
+    }
+    td:nth-child(1),td:nth-child(2){
+        padding: 0;
     }
     table.table-player{
         border: none;
     }
     /* Additional styles for image inside image-logo */
     div.image-logo img {
-        height: 102.47% !important;
+        height: 100% !important;
         aspect-ratio: 1/1;
         padding: 0;
+    }
+    div.all-team img.rank-icon{
+        height: 28.53px;
+        padding: 2px 0;
+        text-align: right;
+        margin: 0 auto;
     }
     section.info h2{
         font-size: 28px;
@@ -616,6 +643,9 @@ td.name{
 
 }
 @media screen and (max-width:365.98px) and (min-width:330px){
+    td:nth-child(1),td:nth-child(2){
+        padding: 0;
+    }
     section.seed p{
         font-size: 15px;
         padding-top: 7px;
