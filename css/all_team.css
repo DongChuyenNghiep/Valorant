@@ -269,7 +269,9 @@ td.name{
         display: inline-block;
         vertical-align: top; /* Align elements vertically */
     }
-    
+    td:nth-child(1){
+        padding: 0;
+    }
     div.table-player {
         width: 60%;
         display: inline-block;
@@ -279,7 +281,12 @@ td.name{
     table.table-player{
         border: none;
     }
-    
+    div.all-team img.rank-icon{
+        height: 29.6px;
+        padding: 2px 0;
+        text-align: right;
+        margin: 0 auto;
+    }
     /* Additional styles for image inside image-logo */
     div.image-logo img {
         height: 100% !important;
@@ -533,7 +540,15 @@ td.name{
         vertical-align: top; /* Align elements vertically */
         height: 137.43px;
     }
-    
+    div.all-team img.rank-icon{
+        height: 27px;
+        padding: 1px 0;
+        text-align: right;
+        margin: 0 auto;
+    }
+    td:nth-child(1){
+        padding: 0;
+    }
     /* Additional styles for image inside image-logo */
     div.image-logo img {
         height: 100% !important;
@@ -621,6 +636,12 @@ td.name{
     }
     .table-player{
         border-left: 0.5px solid white;
+    }
+    div.all-team img.rank-icon{
+        height: 24.4px;
+        padding: 1px;
+        text-align: right;
+        margin: 0 auto;
     }
     div.table-player {
         width: 62%;
