@@ -14,6 +14,13 @@ div.all-team{
     padding-top: 120px;
     
 }
+
+div.all-team img.rank-icon{
+    height: 50px;
+    padding: 2px;
+    text-align: right;
+    margin: 0 auto;
+}
 section.info h2{
     text-align: center;
     font-weight: 700;
@@ -38,16 +45,12 @@ div.box1:last-child{
 div.box{
     border: 1px white solid;
     width: 306px;
-    height:220px;
+    height: 306px;
 }
 
 div.box img{
-margin-left: auto;
-  margin-right: auto;
   display: block;
-  height: 220px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 306px;
 }
 
 section.seed{
@@ -57,7 +60,7 @@ section.seed{
     display: block;
     width: 306px;
     background-color: #08142c;
-    border: 1px solid white;
+    border: 0.5px solid white;
 }
 section.seed p{
     justify-content: center;

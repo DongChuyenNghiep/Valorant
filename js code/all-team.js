@@ -1,6 +1,6 @@
-let SHEET_RANGE_TABLE = 'B1:AN11';
-SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o'
-SHEET_TITLE = 'All team'
+let SHEET_RANGE_TABLE = 'A6:AE28';
+SHEET_ID = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU'
+SHEET_TITLE = 'Các đội đã đăng kí'
 let FULL_URL_TABLE = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_TABLE}`;
 
 fetch(FULL_URL_TABLE)
@@ -8,33 +8,52 @@ fetch(FULL_URL_TABLE)
     .then((rep) => {
         let data = JSON.parse(rep.substr(47).slice(0, -2));
 
-        for (let k = 0; k < 38; k++) {
+        for (let k = 0; k < 20; k++) {
             let dataBody = document.getElementById('table-player' + k);
 
             // Assuming rowData[0] corresponds to the image URL
-            let imageSrc = data.table.rows[10].c[k].v; // Modify this according to your data structure
+            let imageSrc = data.table.rows[2].c[k].v;
+            console.log(imageSrc)
+            // Regular expression to extract the ID from the image source URL
+            const regex = /\/d\/(.+?)\/view/;
+
+            // Extract the ID using the regular expression
+            const match = imageSrc.match(regex);
+            const fileId = match[1];
+            // Now you can use this fileId for further operations
             let imageElement = document.createElement('img');
-            imageElement.src = imageSrc;
+            imageElement.src = `https://drive.google.com/uc?id=${fileId}`;
+
             imageElement.classList.add('player-image'); // Add any necessary classes or attributes
+
 
             // Append the image to the "image-logo" div
             let imageContainer = dataBody.closest('.box1').querySelector('.image-logo');
             imageContainer.appendChild(imageElement);
 
-            for (let i = 2; i < 8; i++) {
-                let rowData = data.table.rows[i].c;
+            // For i % 2 == 0
+            for (let i = 3; i < 12; i += 2) {
+                let rowDataOdd = data.table.rows[i].c;
+                let rowDataEven = data.table.rows[i + 1].c; // Accessing the next row's data
+            
                 let row = document.createElement('tr');
-                let cell = document.createElement('td');
-                cell.classList.add('name');
-
-                cell.textContent = rowData[k].v; // Assuming k corresponds to columns 0-37
-                row.appendChild(cell);
-
+                
+                // Creating cells for odd and even data
+                let cell1 = document.createElement('td');
+                let cell2 = document.createElement('td');
+                let rank_image = document.createElement('img');
+                rank_image.classList.add('rank-icon')
+                rank_image.src = "image/" +rowDataOdd[k].v+'.png'; // Assuming the first value to be placed in cell1
+                cell2.textContent = rowDataEven[k].v; // Assuming the first value to be placed in cell2
+                cell1.append(rank_image);
+                row.appendChild(cell1);
+                row.appendChild(cell2);
+            
                 dataBody.appendChild(row);
             }
 
             // Adding text from rowData[0] to the <section class="seed" id="seed">
-            let seedSection = document.getElementById('team'+k);
+            let seedSection = document.getElementById('team' + k);
             let seedText = document.createElement('p');
             seedText.textContent = data.table.rows[0].c[k].v; // Assuming rowData[0] contains the text for the <p> element
             seedSection.appendChild(seedText);
