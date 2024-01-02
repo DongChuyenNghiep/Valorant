@@ -115,6 +115,14 @@ div.table_rank_A {
     margin-left: 80px;
     justify-content: center;
 }
+.wordBox1 {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: grey;
+
+  }
 .wordBox {
     display: none;
     border: 1px solid #ccc;
@@ -176,6 +184,10 @@ body {
 
 .row1 {
     display: flex;
+    align-items: center;
+
+}
+.row2{
     align-items: center;
     border: 1px solid #ccc;
     width: 85%;

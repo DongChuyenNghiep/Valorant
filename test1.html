@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/valorant.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+            width: 90%;
+        }
+
+        .wordBox1 table {
+            width: 100%;
+        }
+
+        .wordBox1 table td {
+            text-align: center;
+            width: 17%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id='table_fixture_A'>
+
+    </div>
+
+
+
+
+    <script src="js code/day1.js"></script>
+    <script>
+        function show(){
+        const showWordsElements = document.querySelectorAll('.showWords');
+        const wordBoxElements = document.querySelectorAll('.wordBox1');
+        const isBoxVisible = Array.from({ length: showWordsElements.length }).fill(false);
+
+        showWordsElements.forEach((showWords, index) => {
+            showWords.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                if (isBoxVisible[index]) {
+                    wordBoxElements[index].style.display = 'none'; // Hide the box
+                } else {
+                    wordBoxElements[index].style.display = 'block'; // Show the box
+                }
+
+                isBoxVisible[index] = !isBoxVisible[index]; // Toggle the state
+            });
+        });
+    }
+    </script>
+
+    <script src="test.js"></script>
+</body>
+
+</html>

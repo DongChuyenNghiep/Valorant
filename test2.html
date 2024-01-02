@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/valorant.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+            width: 90%;
+        }
+
+        .wordBox1 table {
+            width: 100%;
+        }
+
+        .wordBox1 table td {
+            text-align: center;
+            width: 17%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+   <script>
+function score(){
+    let SHEET_TITLE_DAY_1 = 'Vòng xếp seed';
+let SHEET_RANGE_DAY_1 = 'B41:P41';
+let SHEET_ID_1 = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o'
+let FULL_URL_A_2 = `https://docs.google.com/spreadsheets/d/${SHEET_ID_1}/gviz/tq?sheet=${SHEET_TITLE_DAY_1}&range=${SHEET_RANGE_DAY_1}`;
+
+fetch(FULL_URL_A_2)
+  .then((res) => res.text())
+  .then((rep) => {
+    // Create the elements
+const aTag = document.createElement('a');
+aTag.href = '#';
+aTag.classList.add('showWords');
+
+const divRow2 = document.createElement('div');
+divRow2.classList.add('row2');
+
+const divRow1 = document.createElement('div');
+divRow1.classList.add('row1');
+
+const divTeam1 = document.createElement('div');
+divTeam1.classList.add('team');
+const imgTeam1 = document.createElement('img');
+imgTeam1.classList.add('team-logo', 'loser-darker');
+imgTeam1.src = 'image/6TL.png';
+imgTeam1.alt = 'Sau Thang Lon Logo';
+const spanTeam1 = document.createElement('span');
+spanTeam1.classList.add('team-name', 'loser-darker');
+spanTeam1.textContent = 'Sau Thang Lon';
+divTeam1.appendChild(imgTeam1);
+divTeam1.appendChild(spanTeam1);
+
+const divScoreContainer = document.createElement('div');
+divScoreContainer.classList.add('score-container');
+const spanScore = document.createElement('span');
+spanScore.classList.add('score');
+const spanLoser = document.createElement('span');
+spanLoser.classList.add('loser');
+spanLoser.textContent = ' ';
+const spanScoreLeft = document.createElement('span');
+spanScoreLeft.classList.add('score-left');
+spanScoreLeft.textContent = '0';
+const spanGach = document.createElement('span');
+spanGach.classList.add('gach');
+spanGach.textContent = '-';
+const spanScoreRight = document.createElement('span');
+spanScoreRight.classList.add('score-right');
+spanScoreRight.textContent = '1';
+const spanWinner = document.createElement('span');
+spanWinner.classList.add('winner', 'loser');
+spanWinner.textContent = '>';
+spanScore.appendChild(spanLoser);
+spanScore.appendChild(spanScoreLeft);
+spanScore.appendChild(spanGach);
+spanScore.appendChild(spanScoreRight);
+spanScore.appendChild(spanWinner);
+divScoreContainer.appendChild(spanScore);
+
+const divTeam2 = document.createElement('div');
+divTeam2.classList.add('team');
+const spanTeam2 = document.createElement('span');
+spanTeam2.classList.add('team-name', 'winner-brighter');
+spanTeam2.textContent = 'Liqi Gang';
+const imgTeam2 = document.createElement('img');
+imgTeam2.classList.add('team-logo', 'winner-brighter');
+imgTeam2.src = '/image/10A16(1).png';
+imgTeam2.alt = 'Liqi Gang Logo';
+divTeam2.appendChild(spanTeam2);
+divTeam2.appendChild(imgTeam2);
+
+divRow1.appendChild(divTeam1);
+divRow1.appendChild(divScoreContainer);
+divRow1.appendChild(divTeam2);
+
+const divWordBox1 = document.createElement('div');
+divWordBox1.classList.add('wordBox1');
+
+const divTeamLeft = document.createElement('div');
+divTeamLeft.classList.add('team-left');
+const pTeamLeft = document.createElement('p');
+pTeamLeft.textContent = 'Sau Thang Lon';
+const tableTeam1 = document.createElement('table');
+tableTeam1.classList.add('team1');
+const theadTeam1 = document.createElement('thead');
+const trTitle1 = document.createElement('tr');
+trTitle1.classList.add('title');
+const thFirstCol1 = document.createElement('th');
+thFirstCol1.classList.add('first-col');
+thFirstCol1.textContent = 'Tên thành viên';
+// ... Create and append other table header elements
+const tbodyTeam1 = document.createElement('tbody');
+tbodyTeam1.id = 'team-1';
+tableTeam1.appendChild(theadTeam1);
+theadTeam1.appendChild(trTitle1);
+trTitle1.appendChild(thFirstCol1);
+// ... Append other table header cells
+divTeamLeft.appendChild(pTeamLeft);
+divTeamLeft.appendChild(tableTeam1);
+
+const divTeamRight = document.createElement('div');
+divTeamRight.classList.add('team-right');
+const pTeamRight = document.createElement('p');
+pTeamRight.textContent = 'Liqi Gang';
+const tableTeam2 = document.createElement('table');
+tableTeam2.classList.add('team1');
+const theadTeam2 = document.createElement('thead');
+const trTitle2 = document.createElement('tr');
+trTitle2.classList.add('title');
+const thFirstCol2 = document.createElement('th');
+thFirstCol2.classList.add('first-col');
+thFirstCol2.textContent = 'Tên thành viên';
+// ... Create and append other table header elements
+const tbodyTeam2 = document.createElement('tbody');
+tbodyTeam2.id = 'team-2';
+tableTeam2.appendChild(theadTeam2);
+theadTeam2.appendChild(trTitle2);
+trTitle2.appendChild(thFirstCol2);
+// ... Append other table header cells
+divTeamRight.appendChild(pTeamRight);
+divTeamRight.appendChild(tableTeam2);
+
+divWordBox1.appendChild(divTeamLeft);
+divWordBox1.appendChild(divTeamRight);
+
+divRow2.appendChild(divRow1);
+divRow2.appendChild(divWordBox1);
+
+aTag.appendChild(divRow2);
+
+// Append the structure to the document body
+document.body.appendChild(aTag);
+showbox();
+  });
+}
+score();
+   </script>
+    <script>
+function showbox(){
+        const showWordsElements = document.querySelectorAll('.showWords');
+        const wordBoxElements = document.querySelectorAll('.wordBox1');
+        const isBoxVisible = Array.from({ length: showWordsElements.length }).fill(false);
+
+        showWordsElements.forEach((showWords, index) => {
+            showWords.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                if (isBoxVisible[index]) {
+                    wordBoxElements[index].style.display = 'none'; // Hide the box
+                } else {
+                    wordBoxElements[index].style.display = 'block'; // Show the box
+                }
+
+                isBoxVisible[index] = !isBoxVisible[index]; // Toggle the state
+            });
+        });
+    }
+    </script>
+
+    
+</body>
+
+</html>
