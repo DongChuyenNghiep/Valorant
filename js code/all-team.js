@@ -1,4 +1,4 @@
-let SHEET_RANGE_TABLE = 'A6:AE28';
+let SHEET_RANGE_TABLE = 'A7:AE28';
 SHEET_ID = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU'
 SHEET_TITLE = 'Các đội đã đăng kí'
 let FULL_URL_TABLE = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_TABLE}`;
