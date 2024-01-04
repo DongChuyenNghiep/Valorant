@@ -40,10 +40,12 @@ button.filter-table {
 .nav1 {
     background-color: #08142c;
     padding: 22px 0;
+    font-size: 17px;
     justify-content: space-between;
 }
 
 .nav2 {
+    font-size: 17px;
     background-color: #031840;
     top: 80px;
     position: fixed;

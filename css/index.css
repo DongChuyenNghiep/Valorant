@@ -3,9 +3,28 @@
     margin: 0;
 }
 
+.nav1 {
+    background-color: #08142c;
+    padding: 22px 0;
+    font-size: 17px;
+    justify-content: space-between;
+    font-family: 'Nunito';
+}
+
+.nav2 {
+    font-size: 17px;
+    background-color: #031840;
+    top: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    padding: 20px 0;
+    font-family: 'Nunito';
+}
+
 body{
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito' !important;
 }
 
 div.welcome{
@@ -15,9 +34,7 @@ div.welcome{
     text-align: left;
     display: flex;
 }
-li{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+
 section.text{
     padding-top: 20px;
     width: 80%;
