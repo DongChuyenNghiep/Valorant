@@ -19,7 +19,6 @@ fetch(FULL_URL_TABLE)
             // Extract the ID using the regular expression
             const match = imageSrc.match(regex);
             const fileId = match[1];
-            console.log(fileId);
             // Now you can use this fileId for further operations
             let imageElement = document.createElement('img');
             imageElement.src = ` https://drive.google.com/thumbnail?id=${fileId}`;
