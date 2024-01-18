@@ -14,7 +14,9 @@ div.all-team{
     padding-top: 120px;
     
 }
-
+table.table-player{
+    width: 100%;
+}
 div.all-team img.rank-icon{
     height: 50px;
     padding: 2px;
