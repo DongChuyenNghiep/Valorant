@@ -1,75 +1,45 @@
-$(document).ready(function() {
+let SHEET_TITLE_CALENDER = 'Lịch trình';
+let SHEET_RANGE_CALENDER = 'A2:F30';
+let SHEET_ID_CALENDER = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU';
+let FULL_URL_CALENDER = `https://docs.google.com/spreadsheets/d/${SHEET_ID_CALENDER}/gviz/tq?sheet=${SHEET_TITLE_CALENDER}&range=${SHEET_RANGE_CALENDER}`;
+function fetchDataAndRefreshCalendar() {
+fetch(FULL_URL_CALENDER)
+  .then((res) => res.text())
+  .then((rep) => {
+    let data = JSON.parse(rep.substr(47).slice(0, -2));
+    let dataBody = document.getElementById('calender');
+    
+    let events = [];
 
-    $('.calendar').fullCalendar({
-      locale: 'vi-vn',
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,week,day'
-      },
-      defaultDate: '2024-01-10',
-      navLinks: true, // can click day/week names to navigate views
-      editable: false,
-      eventLimit: true, // allow "more" link when too many events
-      events: [
-        {
-          title: 'Bốc thăm vòng loại',
-          start: '2024-01-19'
+    for (let i = 0; i < data.table.rows.length; i++) {
+      let rowData = data.table.rows[i].c;
+
+      // Add each event to the events array
+      events.push({
+        title: rowData[0].v,
+        start: rowData[4].v,
+        end: rowData[5].v,
+        color: rowData[3].v,
+      });
+    }
+    $(document).ready(function() {
+      $('#calendar').fullCalendar({
+        locale: 'vi-vn',
+        header: {
+          left: 'prev,next,today',
+          center: 'title',
+          right: 'month'
         },
-        {
-          title: 'Quyết định thể thức vòng loại',
-          start: '2024-01-18',
-          end: '2024-01-20',
-        },
-        {
-          id: 2,
-          title: 'null',
-          start: '2024-01-22',
-          color: 'red',
-        },
-        {
-          id: 1,
-          title: 'Vòng loại',
-          start: '2024-1-23',
-          end: '2024-1-31'
-        },
-        
-        {
-          id: 3,
-          title: 'Trận 2(23:00): Team C vs Team D',
-          start: '2024-01-22',
-        },
-        {
-          title: 'Meeting',
-          start: '2018-03-12T10:30:00',
-          end: '2018-03-12T12:30:00'
-        },
-        {
-          title: 'Lunch',
-          start: '2018-03-12T12:00:00'
-        },
-        {
-          title: 'Meeting',
-          start: '2018-03-12T14:30:00'
-        },
-        {
-          title: 'Happy Hour',
-          start: '2018-03-12T17:30:00'
-        },
-        {
-          title: 'Dinner',
-          start: '2018-03-12T20:00:00'
-        },
-        {
-          title: 'Birthday Party',
-          start: '2018-03-13T07:00:00'
-        },
-        {
-          title: 'Click for Google',
-          url: 'http://google.com/',
-          start: '2018-03-28'
-        }
-      ]
+        defaultDate: '2024-01-10',
+        navLinks: true,
+        editable: false,
+        eventLimit: true,
+        events: events  // Set the events array
+      });
     });
-
   });
+}
+fetchDataAndRefreshCalendar();
+
+// Fetch and refresh every 5 minutes (300,000 milliseconds)
+setInterval(fetchDataAndRefreshCalendar, 1000);
