@@ -17,18 +17,27 @@ $(document).ready(function() {
           start: '2024-01-19'
         },
         {
+          title: 'Quyết định thể thức vòng loại',
+          start: '2024-01-18',
+          end: '2024-01-20',
+        },
+        {
+          id: 2,
+          title: 'null',
+          start: '2024-01-22',
+          color: 'red',
+        },
+        {
+          id: 1,
           title: 'Vòng loại',
           start: '2024-1-23',
           end: '2024-1-31'
         },
+        
         {
-          title: 'Trận 1 (21:30): Team A vs Team B',
-          start: '2024-01-21',
-          color: 'red',
-        },
-        {
-          title: 'Trận 2: Team C vs Team D',
-          start: '2024-01-21',
+          id: 3,
+          title: 'Trận 2(23:00): Team C vs Team D',
+          start: '2024-01-22',
         },
         {
           title: 'Meeting',
