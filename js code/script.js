@@ -19,7 +19,7 @@ fetch(FULL_URL_CALENDER)
         title: rowData[0].v,
         start: rowData[4].v,
         end: rowData[5].v,
-        color: rowData[3].v,
+        color: '#'+rowData[3].v,
       });
     }
     $(document).ready(function() {
