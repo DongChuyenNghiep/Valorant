@@ -1,4 +1,4 @@
-let SHEET_RANGE_B_1 = 'A10:J13';
+let SHEET_RANGE_B_1 = 'A5:J7';
 
 let FULL_URL_TABLE_B = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_B_1}`;
 
@@ -21,9 +21,12 @@ let cell8 = document.createElement('td');
 let cell9 = document.createElement('td');
 
 // Assuming rowData[0].v contains the source URL for the image
-let imageSrc = "/"+rowData[0].v;
+let imageSrcB = rowData[0].v;
+const regex = /\/d\/(.+?)\/view/;
+const logoteamB = imageSrcB.match(regex);
+const fileIdB = logoteamB[1];
 let image = document.createElement('img');
-image.src = imageSrc;
+image.src = `https://drive.google.com/thumbnail?id=${fileIdB}`;
 image.classList.add('team-logo')
 
 cell1.appendChild(image); // Append the img element to cell1

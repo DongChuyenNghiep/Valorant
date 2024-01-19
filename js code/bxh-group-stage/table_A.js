@@ -1,6 +1,6 @@
-let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
-let SHEET_TITLE = 'Fixture-group stage';
-let SHEET_RANGE_A_1 = 'A3:J6';
+let SHEET_ID = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU';
+let SHEET_TITLE = 'BXH';
+let SHEET_RANGE_A_1 = 'A1:J3';
 
 let FULL_URL_TABLE_A = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_A_1}`;
 
@@ -12,7 +12,7 @@ fetch(FULL_URL_TABLE_A)
         for (let i = 0; i < data.table.rows.length; i++) {
             let rowData = data.table.rows[i].c;
 let row = document.createElement('tr');
-let cell1 = document.createElement('td');
+
 let cell2 = document.createElement('td');
 let cell3 = document.createElement('td');
 let cell4 = document.createElement('td');
@@ -23,12 +23,14 @@ let cell8 = document.createElement('td');
 let cell9 = document.createElement('td');
 
 // Assuming rowData[0].v contains the source URL for the image
-let imageSrc = "/"+rowData[0].v;
+let imageSrcA = rowData[0].v;
+const regex = /\/d\/(.+?)\/view/;
+const logoteamA = imageSrcA.match(regex);
+const fileIdA = logoteamA[1];
 let image = document.createElement('img');
-image.src = imageSrc;
+image.src = `https://drive.google.com/thumbnail?id=${fileIdA}`;
 image.classList.add('team-logo')
 
-cell1.appendChild(image); // Append the img element to cell1
 function updateTextContentA() {
     if (window.innerWidth > 768) {
       cell2.textContent = rowData[1].v;
@@ -51,12 +53,11 @@ cell7.textContent = rowData[7].v;
 cell8.textContent = rowData[8].v;
 cell9.textContent = rowData[9].v;
 
-cell1.classList.add('first-col');
+
 cell2.classList.add('second-col');
-cell1.classList.add('sticky-col');
 cell2.classList.add('sticky-col');
 
-row.appendChild(cell1);
+row.appendChild(image);
 row.appendChild(cell2);
 row.appendChild(cell3);
 row.appendChild(cell4);

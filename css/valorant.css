@@ -1,6 +1,16 @@
+@import url(//fonts.googleapis.com/css?family=Nunito);
 .team-logo {
     height: 70px;
-
+} 
+nav.nav1,nav.nav2 a{
+    font-size: 16px !important;
+    font-family: 'Nunito';
+}
+*{
+    font-family: 'Nunito';
+}
+.w3-container{
+    padding: 0.1rem 8px !important;
 }
 body{
     font-family: 'Nunito';
@@ -19,6 +29,9 @@ nav{
 }
 a.disabled {
     position: fixed;
+}
+a.showWords,a.showWords1{
+    text-decoration: none;
 }
 
 .team-name {
@@ -40,12 +53,10 @@ button.filter-table {
 .nav1 {
     background-color: #08142c;
     padding: 22px 0;
-    font-size: 17px;
     justify-content: space-between;
 }
 
 .nav2 {
-    font-size: 17px;
     background-color: #031840;
     top: 80px;
     position: fixed;
@@ -104,7 +115,13 @@ table.my-table {
 
 }
 
-
+.team-name{
+    text-align: center;
+}
+tr.title th{
+    text-align: center;
+    padding-bottom: 5px;
+}
 th {
     padding: 5px 0 15px 0;
 }
@@ -119,13 +136,24 @@ div.table_rank_A {
 }
 .wordBox1 {
     display: none;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: grey;
-
+    border: 1px solid #ccc;  
+    width: 100%;
+    transition: max-height 0.3s ease-in-out;
+    }
+.team-left{
+    background-color: rgb(16, 98, 176);
+}
+.team-right{
+    background-color: rgb(199, 95, 81);
+}
+  
+  .wordBox1 table{
+    border-radius: 20px;
   }
-.wordBox {
+  tr:last-child td{
+    border-bottom: none;
+}
+  .wordBox{
     display: none;
     border: 1px solid #ccc;
     padding: 10px;
@@ -134,6 +162,22 @@ div.table_rank_A {
     width: 70%;
     transition: max-height 0.3s ease-in-out;
   }
+  .wordBox1 table {
+    width: 100%;
+}
+
+.wordBox1 table td {
+    text-align: center;
+    width: 15%;
+}
+.wordBox1 table td:nth-child(2){
+    text-align: left;
+    width: 19%;
+}
+.wordBox1 table tr{
+    border-bottom: 1px solid rgba(252, 252, 252, 0.334);;
+}
+
 .wordBox p{
     margin: 0;
     font-style: italic;
@@ -152,16 +196,39 @@ tr.title {
     border: 1px white solid;
     border-radius: 5px;
 }
+table.my-table td:nth-child(1) {
+    text-align: right;
+    width: 8%;
+}
 
-
-
+table.my-table td:nth-child(2) {
+    text-align: left;
+    width: 17%;
+}
+img.agent-pick{
+    width: 40px;
+    margin: 10px 0 10px 20px;
+}
+table.my-table tr{
+    border-bottom: 1px solid rgba(252, 252, 252, 0.334);
+}
+table.my-table img{
+    margin: 10px 0;
+}
+p.kda{
+    text-align: center;
+    margin-bottom: 3px;
+}
+p.team-name{
+    padding-top: 15px;
+}
 td,
 th {
     border-bottom: 1px solid rgba(252, 252, 252, 0.334);
 }
 
 td,
-tr {
+tr,th {
     padding: 5px 0 5px 10px;
 
 }
@@ -176,19 +243,18 @@ body {
     font: 17px;
 }
 
-.row1 {
-    display: flex;
-    align-items: center;
-
-}
-.row2{
+.row2 {
     align-items: center;
     border: 1px solid #ccc;
-    width: 85%;
+    width: 90%;
     margin: 10px auto 70px;
     border-radius: 10px;
     justify-content: space-between;
-    padding: 7px 20px;
+
+}
+.row1{
+    display: flex;
+    padding: 5px;
 }
 
 .loser-darker {
@@ -258,7 +324,7 @@ h6.match:nth-child(1) {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 2px;
     background-color: #08142c;
 }
 
@@ -284,7 +350,7 @@ a.custom-focus {
     border-right: 8px solid rgba(0, 255, 255, 0.762) !important;
 }
 
-h3{
+h3 {
     text-align: center;
     font-weight: bold !important;
     font-size: 28px !important;
@@ -356,12 +422,12 @@ h3{
     div.w3-container {
         width: 82%;
         margin-left: 18%;
+        margin-top: 160px;
     }
     
     #mySidebar {
         width: 18%;
         background-color: #212529;
-        padding-top: 150px;
     }
 
     #mySidebar a {
@@ -402,6 +468,7 @@ h3{
 
     .button-filter {
         padding: 10px 0 30px 70px;
+        margin: 20px 10px 0 0;
     }
     
 }
@@ -418,9 +485,7 @@ h3{
         padding: 6px 0;
     }
 
-    .row1 {
-        width: 95%;
-    }
+
 
     div.cac-vong {
         padding: 40px 0px 0 15px;
@@ -583,7 +648,7 @@ h3{
     }
 
     .row1 {
-        padding: 10px;
+        padding: 10px 2px;
         width: 100%;
 
     }
@@ -630,7 +695,6 @@ h3{
     }
 
     .sticky-col {
-        position: -webkit-sticky;
         position: sticky;
 
     }
@@ -646,15 +710,30 @@ h3{
 
     }
 
-    .first-col {
-        background-color: #5800bc;
-        left: 0;
-
+    .team-left table.my-table img , .wordBox1 .team-left table img,.wordBox1 .team-left table th:first-child {
+        background-color: rgb(16, 98, 176);
+        left: 0%;
+        position: sticky;
     }
-
+    .team-right table.my-table img , .wordBox1 .team-right table img,.wordBox1 .team-right table th:first-child {
+        background-color: rgb(199, 95, 81);
+        left: 0%;
+        position: sticky;
+    }
+    .wordBox1 table th:nth-child(2),.team-left table td:nth-child(2),.team-right table td:nth-child(2){
+        left: 13%;
+        position: sticky;
+        border-bottom: 1px solid rgba(252, 252, 252, 0.334);
+    }
+    .team-left table th:nth-child(2),.team-left table td:nth-child(2){
+        background-color: rgb(16, 98, 176);
+    }
+    .team-right table th:nth-child(2),.team-right table td:nth-child(2){
+        background-color: rgb(199, 95, 81);
+    }
     .second-col {
         background-color: #5800bc;
-        left: 14.6%;
+        left: 15%;
 
 
     }

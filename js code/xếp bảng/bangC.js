@@ -15,12 +15,16 @@ let cell1 = document.createElement('td');
 let cell2 = document.createElement('td');
 
 // Assuming rowData[0].v contains the source URL for the image
-let imageSrc = "/"+rowData[0].v;
-let image = document.createElement('img');
-image.src = imageSrc;
-image.classList.add('team-logo')
+let imageSrcC = rowData[0].v;
+const regex = /\/d\/(.+?)\/view/;
+const logoteamC = imageSrcC.match(regex);
+const fileIdC = logoteamC[1];
+let imageC = document.createElement('img');
+imageC.src = `https://drive.google.com/thumbnail?id=${fileIdC}`;
+imageC.classList.add('team-logo')
 
-cell1.appendChild(image); // Append the img element to cell1
+cell1.appendChild(imageC); // Append the img element to cell1
+
 function updateTextContentA() {
     if (window.innerWidth > 1024) {
       cell2.textContent = rowData[1].v;

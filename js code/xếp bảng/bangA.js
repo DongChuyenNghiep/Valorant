@@ -1,6 +1,6 @@
-let SHEET_ID = '1yhQbcmnQB52fu1PqlHPRNWOHmJwddS8J9EpIQqvJx2o';
-let SHEET_TITLE = 'Xếp vòng bảng';
-let SHEET_RANGE_A_1 = 'A1:C4';
+let SHEET_ID = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU';
+let SHEET_TITLE = 'Chia bảng';
+let SHEET_RANGE_A_1 = 'A1:C3';
 
 let FULL_URL_TABLE_A = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_A_1}`;
 
@@ -16,9 +16,12 @@ let cell1 = document.createElement('td');
 let cell2 = document.createElement('td');
 
 // Assuming rowData[0].v contains the source URL for the image
-let imageSrc = "/"+rowData[0].v;
+let imageSrcA = rowData[0].v;
+const regex = /\/d\/(.+?)\/view/;
+const logoteamA = imageSrcA.match(regex);
+const fileIdA = logoteamA[1];
 let image = document.createElement('img');
-image.src = imageSrc;
+image.src = `https://drive.google.com/thumbnail?id=${fileIdA}`;
 image.classList.add('team-logo')
 
 cell1.appendChild(image); // Append the img element to cell1
