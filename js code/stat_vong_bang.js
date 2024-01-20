@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', async function() {
             { title: 'Bảng A', range: 'B2:H31', targetLeft: 'team-left-A-', targetRight: 'team-right-A-' },
             { title: 'Bảng B', range: 'B2:H31', targetLeft: 'team-left-B-', targetRight: 'team-right-B-' },
             { title: 'Bảng C', range: 'B2:H31', targetLeft: 'team-left-C-', targetRight: 'team-right-C-' },
-            // ... (other groups)
         ];
 
         const SHEET_ID = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU';
