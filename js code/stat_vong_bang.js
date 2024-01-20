@@ -13,17 +13,25 @@ document.addEventListener('DOMContentLoaded', async function() {
                 const rowData = data.table.rows[i].c;
                 const row = document.createElement('tr');
                 let agent = document.createElement('img');
+                let ign_col = document.createElement('div');
+                ign_col.classList.add('first-col');
+                let IGN = document.createElement('span');
+                IGN.textContent = rowData[1].v;
                 agent.classList.add('agent-pick');
                 agent.src = 'agent/'+rowData[0].v+'.png';
                 let hs = document.createElement('td');
                 hs.textContent = rowData[6].v + ' %';
-                
-                row.appendChild(agent);
-                for (let j = 1; j < rowData.length-1; j++) {
+                ign_col.appendChild(agent);
+                ign_col.appendChild(IGN);
+                let first_col = document.createElement('td');
+                first_col.appendChild(ign_col);
+                row.appendChild(first_col);
+                for (let j = 2; j < rowData.length-1; j++) {
                     const cell = document.createElement('td');
                     cell.textContent = rowData[j].v;
                     row.appendChild(cell);
                 }
+                
                 row.appendChild(hs);
                 dataBody.appendChild(row);
             }

@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function(){
   
         thead_left.appendChild(tr_table_left);
         tr_table_left.appendChild(th_thead_left0);
-        tr_table_left.appendChild(th_thead_left1);
+
         tr_table_left.appendChild(th_thead_left2);
         tr_table_left.appendChild(th_thead_left3);
         tr_table_left.appendChild(th_thead_left4);
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function(){
   
         thead_right.appendChild(tr_table_right);
         tr_table_right.appendChild(th_thead_right0);
-        tr_table_right.appendChild(th_thead_right1);
+       
         tr_table_right.appendChild(th_thead_right2);
         tr_table_right.appendChild(th_thead_right3);
         tr_table_right.appendChild(th_thead_right4);

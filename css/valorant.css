@@ -168,11 +168,11 @@ div.table_rank_A {
 
 .wordBox1 table td {
     text-align: center;
-    width: 15%;
+    width: 12%;
 }
-.wordBox1 table td:nth-child(2){
+.wordBox1 table td:nth-child(1){
     text-align: left;
-    width: 19%;
+    width: 20%;
 }
 .wordBox1 table tr{
     border-bottom: 1px solid rgba(252, 252, 252, 0.334);;
@@ -206,8 +206,8 @@ table.my-table td:nth-child(2) {
     width: 17%;
 }
 img.agent-pick{
-    width: 40px;
-    margin: 10px 0 10px 20px;
+    width: 50px;
+    margin: 3px 20px 3px 15px;
 }
 table.my-table tr{
     border-bottom: 1px solid rgba(252, 252, 252, 0.334);
@@ -418,7 +418,7 @@ h3 {
     display: block;
 }
 
-@media screen and (max-width:1399.98px) and (min-width:992px) {
+@media screen and (max-width:1399.98px) and (min-width:1025px) {
     div.w3-container {
         width: 82%;
         margin-left: 18%;
@@ -472,7 +472,231 @@ h3 {
     }
     
 }
+@media screen and (max-width:1024px)and (min-width:992px)  {
+    div.w3-container {
+        width: 82%;
+        margin-left: 18%;
+        
+    }
+    .button-filter {
+        padding: 10px 0 30px 70px;
+        margin: 20px 10px 0 0;
+    }
+    
+    
+    #mySidebar {
+        width: 18%;
+        background-color: #212529;
+    }
+    a.disabled {
+        position: static;
+    }
 
+    .luat-tinh-diem{
+        margin: 0;
+    }
+    .wordBox{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .nav1 {
+        background-color: #08142c;
+        padding: 6px 0;
+        justify-content: space-between;
+    }
+
+    h3 {
+        font-size: 22px !important;
+    }
+
+    button.w3-bar-item {
+        background-color: #212529;
+        padding: 25px !important;
+    }
+
+    .button-filter {
+        padding: 10px 0 0px 20px;
+    }
+
+    button.filter-table {
+        margin-top: 10px;
+    }
+
+    #mySidebar a {
+        color: white;
+        padding: 25px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.195);
+        filter: brightness(50%);
+        background-color: #212529;
+    }
+
+    .w3-container {
+        margin: 0;
+    }
+
+    div.w3-teal {
+        padding-top: 150px;
+        color: black;
+        width: 100%;
+        background-color: #5800bc !important;
+
+    }
+
+    button.w3-teal{
+        background: #5800bc !important;
+        padding-left: 18px;
+        text-align: left;
+        width: 100%;
+    }
+
+    #mySidebar {
+        padding-top: 155px;
+    }
+
+    button.w3-teal {
+        padding-top: 24px;
+    }
+
+    table.my-table {
+        width: 120%;
+    }
+
+    th#win {
+        width: 120px !important;
+    }
+
+    div.cac-vong {
+        padding: 40px 0px 0 15px;
+    }
+
+    div.cac-vong li {
+        list-style: none;
+        display: block;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .row1 {
+        padding: 10px 2px;
+        width: 100%;
+
+    }
+
+    .score-container {
+        text-align: center;
+        margin: auto;
+        /* Center the score-container */
+    }
+
+    span.score {
+        font-weight: 700;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    span.score-left,
+    span.score-right,
+    span.gach {
+        font-size: 15px;
+    }
+
+    span.gach {
+        margin: 0 5px;
+    }
+
+    span.winner {
+        font-size: 15px;
+        font-weight: bolder;
+        color: aqua;
+        justify-content: center;
+
+    }
+
+    .team-logo {
+        height: 32px;
+        padding: 0px 5px;
+
+    }
+
+    .team-name {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .sticky-col {
+        position: sticky;
+
+    }
+    .wordBox1 table{
+        width: 150%;
+    }
+    table.my-table {
+        width: 90%;
+    }
+    .wordBox1 table td{
+        width: 15%;
+    }
+    .wordBox1 table td:nth-child(1){
+        padding: 0;
+    }
+    img.agent-pick{
+        margin-right: 15px;
+    }
+    .wrapper {
+        position: relative;
+        overflow: auto;
+        white-space: nowrap;
+
+    }
+
+    .wordBox1 .team-left table td:nth-child(1),.wordBox1 .team-left table th:first-child {
+        background-color: rgb(16, 98, 176);
+        left: 0%;
+        position: sticky;
+    }
+    .wordBox1 .team-right table td:nth-child(1).wordBox1 .team-right table th:first-child {
+        background-color: rgb(199, 95, 81);
+        left: 0%;
+        position: sticky;
+    }
+    .wordBox1 table th:nth-child(2),.team-left table td:nth-child(2),.team-right table td:nth-child(2){
+        border-bottom: 1px solid rgba(252, 252, 252, 0.334);
+    }
+    .team-left table th:nth-child(2),.team-left table td:nth-child(2){
+        background-color: rgb(16, 98, 176);
+    }
+    .team-right table th:nth-child(2),.team-right table td:nth-child(2){
+        background-color: rgb(199, 95, 81);
+    }
+
+    td {
+        padding: 0 40px;
+    }
+    table.my-table td:nth-child(1),
+    table.my-table td:nth-child(2) {
+        padding: 0 10px;
+        background-color: #5800bc;
+    }
+
+    tbody {
+        width: 95%;
+    }
+    .luat-tinh-diem a{
+        padding: 0;
+        text-decoration: underline;
+        background-color: #5800bc;
+        border: none;
+        margin-left: 30px;
+        color: #f0ab58;
+    }
+    button.navbar-toggler.color-expand{
+        color: white !important;
+        font-size: 24px;
+        padding: 6px;
+        border-radius: 6px;
+    }
+}
 
 @media screen and (max-width:991.98px) and (min-width:765.98px) {
     a.disabled {
@@ -702,7 +926,12 @@ h3 {
     table.my-table {
         width: 90%;
     }
-
+    .wordBox1 table td:nth-child(1){
+        padding: 0;
+    }
+    img.agent-pick{
+        margin-right: 15px;
+    }
     .wrapper {
         position: relative;
         overflow: auto;
@@ -710,19 +939,17 @@ h3 {
 
     }
 
-    .team-left table.my-table img , .wordBox1 .team-left table img,.wordBox1 .team-left table th:first-child {
+    .wordBox1 .team-left table td:nth-child(1),.wordBox1 .team-left table th:first-child {
         background-color: rgb(16, 98, 176);
         left: 0%;
         position: sticky;
     }
-    .team-right table.my-table img , .wordBox1 .team-right table img,.wordBox1 .team-right table th:first-child {
+    .wordBox1 .team-right table td:nth-child(1).wordBox1 .team-right table th:first-child {
         background-color: rgb(199, 95, 81);
         left: 0%;
         position: sticky;
     }
     .wordBox1 table th:nth-child(2),.team-left table td:nth-child(2),.team-right table td:nth-child(2){
-        left: 13%;
-        position: sticky;
         border-bottom: 1px solid rgba(252, 252, 252, 0.334);
     }
     .team-left table th:nth-child(2),.team-left table td:nth-child(2){
@@ -731,24 +958,12 @@ h3 {
     .team-right table th:nth-child(2),.team-right table td:nth-child(2){
         background-color: rgb(199, 95, 81);
     }
-    .second-col {
-        background-color: #5800bc;
-        left: 15%;
 
-
-    }
-
-    .sec-col {
-        background-color: #5800bc;
-        left: 14.6%;
-        box-shadow: 10px;
-
-    }
     td {
         padding: 0 40px;
     }
-    td:nth-child(1),
-    td:nth-child(2) {
+    table.my-table td:nth-child(1),
+    table.my-table td:nth-child(2) {
         padding: 0 10px;
         background-color: #5800bc;
     }
