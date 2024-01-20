@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 agent.classList.add('agent-pick');
                 agent.src = 'agent/'+rowData[0].v+'.png';
                 let hs = document.createElement('td');
-                hs.textContent = rowData[6].v + ' %';
+                hs.textContent = rowData[6].v;
                 ign_col.appendChild(agent);
                 ign_col.appendChild(IGN);
                 let first_col = document.createElement('td');
@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         };
 
         const sheets = [
-            { title: 'Bảng A', range: 'B2:H31', targetLeft: 'team-left-A-', targetRight: 'team-right-A-' },
-            { title: 'Bảng B', range: 'B2:H31', targetLeft: 'team-left-B-', targetRight: 'team-right-B-' },
-            { title: 'Bảng C', range: 'B2:H31', targetLeft: 'team-left-C-', targetRight: 'team-right-C-' },
+            { title: 'Bảng A', range: 'B2:L31', targetLeft: 'team-left-A-', targetRight: 'team-right-A-' },
+            { title: 'Bảng B', range: 'B2:L31', targetLeft: 'team-left-B-', targetRight: 'team-right-B-' },
+            { title: 'Bảng C', range: 'B2:L31', targetLeft: 'team-left-C-', targetRight: 'team-right-C-' },
         ];
 
         const SHEET_ID = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU';

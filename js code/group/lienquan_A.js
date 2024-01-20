@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function(){
         
         let th_thead_left1 = document.createElement('th');
         th_thead_left1.classList.add("first-col");
-        th_thead_left1.textContent = 'IGN';
+        th_thead_left1.textContent = 'AVG Score';
         let th_thead_left2 = document.createElement('th');
         th_thead_left2.textContent = 'K';
         let th_thead_left3 = document.createElement('th');
@@ -194,6 +194,12 @@ document.addEventListener('DOMContentLoaded', function(){
         th_thead_left5.textContent = 'KDA';
         let th_thead_left6 = document.createElement('th');
         th_thead_left6.textContent = 'HS';
+        let th_thead_left7 = document.createElement('th');
+        th_thead_left7.textContent = 'Econ';
+        let th_thead_left8 = document.createElement('th');
+        th_thead_left8.textContent = 'Plant';
+        let th_thead_left9 = document.createElement('th');
+        th_thead_left9.textContent = 'Defuse';
         let tbody_left = document.createElement('tbody');
         tbody_left.id = `team-left-A-${i + 1}`;
         let tr_table_left = document.createElement('tr');
@@ -227,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function(){
         let thead_right = document.createElement('thead');
         let th_thead_right1 = document.createElement('th');
         th_thead_right1.classList.add("first-col");
-        th_thead_right1.textContent = 'IGN';
+        th_thead_right1.textContent = 'AVG Score';
         let th_thead_right2 = document.createElement('th');
         th_thead_right2.textContent = 'K';
         let th_thead_right3 = document.createElement('th');
@@ -238,6 +244,12 @@ document.addEventListener('DOMContentLoaded', function(){
         th_thead_right5.textContent = 'KDA';
         let th_thead_right6 = document.createElement('th');
         th_thead_right6.textContent = 'HS';
+        let th_thead_right7 = document.createElement('th');
+        th_thead_right7.textContent = 'Econ';
+        let th_thead_right8 = document.createElement('th');
+        th_thead_right8.textContent = 'Plant';
+        let th_thead_right9 = document.createElement('th');
+        th_thead_right9.textContent = 'Defuse';
         let tbody_right = document.createElement('tbody');
         tbody_right.id = `team-right-A-${i + 1}`;
         let tr_table_right = document.createElement('tr');
@@ -247,12 +259,15 @@ document.addEventListener('DOMContentLoaded', function(){
   
         thead_left.appendChild(tr_table_left);
         tr_table_left.appendChild(th_thead_left0);
-
+        tr_table_left.appendChild(th_thead_left1);
         tr_table_left.appendChild(th_thead_left2);
         tr_table_left.appendChild(th_thead_left3);
         tr_table_left.appendChild(th_thead_left4);
         tr_table_left.appendChild(th_thead_left5);
         tr_table_left.appendChild(th_thead_left6);
+        tr_table_left.appendChild(th_thead_left7);
+        tr_table_left.appendChild(th_thead_left8);
+        tr_table_left.appendChild(th_thead_left9);
         table_left.appendChild(thead_left);
         table_left.appendChild(tbody_left);
         team_left.appendChild(table_left);
@@ -265,12 +280,15 @@ document.addEventListener('DOMContentLoaded', function(){
   
         thead_right.appendChild(tr_table_right);
         tr_table_right.appendChild(th_thead_right0);
-       
+        tr_table_right.appendChild(th_thead_right1);
         tr_table_right.appendChild(th_thead_right2);
         tr_table_right.appendChild(th_thead_right3);
         tr_table_right.appendChild(th_thead_right4);
         tr_table_right.appendChild(th_thead_right5);
         tr_table_right.appendChild(th_thead_right6);
+        tr_table_right.appendChild(th_thead_right7);
+        tr_table_right.appendChild(th_thead_right8);
+        tr_table_right.appendChild(th_thead_right9);
         table_right.appendChild(thead_right);
         table_right.appendChild(tbody_right);
         team_right.appendChild(table_right);

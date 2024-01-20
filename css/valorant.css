@@ -163,17 +163,19 @@ div.table_rank_A {
     transition: max-height 0.3s ease-in-out;
   }
   .wordBox1 table {
-    width: 100%;
+    width: 150%;
+}
+.wordBox1 .team-left table td:nth-child(1), .wordBox1 .team-right table td:nth-child(1) {
+    left: 0;
+    position: sticky;
+    text-align: left;
 }
 
-.wordBox1 table td {
+.wordBox1 .team-left table td, .wordBox1 .team-right table td {
     text-align: center;
-    width: 12%;
+    width: 7%;
 }
-.wordBox1 table td:nth-child(1){
-    text-align: left;
-    width: 20%;
-}
+
 .wordBox1 table tr{
     border-bottom: 1px solid rgba(252, 252, 252, 0.334);;
 }
@@ -306,6 +308,21 @@ span.gach {
 span.gach {
     margin: 0 5px;
 }
+.team-left td:first-child,.team-left th:first-child, .team-right td:first-child,.team-right th:first-child {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.team-left td:first-child ::after,.wordBox1 .team-left table th:first-child::after ,.team-right td:first-child ::after, .wordBox1 .team-right table th:first-child::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 10px; /* Adjust the shadow width as needed */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
+}
 
 span.winner {
     font-size: 14px;
@@ -328,7 +345,12 @@ h6.match:nth-child(1) {
     background-color: #08142c;
 }
 
+.wrapper {
+    position: relative;
+    overflow: auto;
+    white-space: nowrap;
 
+}
 /* Track */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 1px #f5921d;
@@ -356,7 +378,18 @@ h3 {
     font-size: 28px !important;
     padding-bottom: 10px;
 }
+.wordBox1 .team-left table td:nth-child(1),.wordBox1 .team-left table th:first-child {
+    background-color: rgb(16, 98, 176);
+    left: 0%;
+    position: sticky;
 
+}
+.wordBox1 .team-right table td:nth-child(1),.wordBox1 .team-right table th:first-child {
+    background-color: rgb(199, 95, 81);
+    left: 0%;
+    position: sticky;
+
+}
 /* Handle on hover */
 
 @media screen and (min-width: 1400px) {
@@ -534,7 +567,22 @@ h3 {
     .w3-container {
         margin: 0;
     }
+    .team-left td:first-child,.team-left th:first-child, .team-right td:first-child,.team-right th:first-child {
+        padding: 10px;
+        text-align: center;
+        position: relative;
+    }
 
+    .team-left td:first-child ::after ,.team-right td:first-child ::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 10px; /* Adjust the shadow width as needed */
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
+    }
+    
     div.w3-teal {
         padding-top: 150px;
         color: black;
@@ -559,7 +607,7 @@ h3 {
     }
 
     table.my-table {
-        width: 120%;
+        width: 150%;
     }
 
     th#win {
@@ -629,7 +677,7 @@ h3 {
 
     }
     .wordBox1 table{
-        width: 150%;
+        width: 152%;
     }
     table.my-table {
         width: 90%;
@@ -654,11 +702,13 @@ h3 {
         background-color: rgb(16, 98, 176);
         left: 0%;
         position: sticky;
+        width: 100%;
     }
-    .wordBox1 .team-right table td:nth-child(1).wordBox1 .team-right table th:first-child {
+    .wordBox1 .team-right table td:nth-child(1),.wordBox1 .team-right table th:first-child {
         background-color: rgb(199, 95, 81);
         left: 0%;
         position: sticky;
+        width: 100%;
     }
     .wordBox1 table th:nth-child(2),.team-left table td:nth-child(2),.team-right table td:nth-child(2){
         border-bottom: 1px solid rgba(252, 252, 252, 0.334);
