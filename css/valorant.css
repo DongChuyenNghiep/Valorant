@@ -853,7 +853,9 @@ h3 {
     h3 {
         font-size: 22px !important;
     }
-
+    .wordBox1 table{
+        width: 300%;
+    }
     button.w3-bar-item {
         background-color: #212529;
         padding: 25px !important;
