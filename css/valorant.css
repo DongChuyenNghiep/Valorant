@@ -232,7 +232,11 @@ td,
 th {
     border-bottom: 1px solid rgba(252, 252, 252, 0.334);
 }
-
+.fc-unthemed .fc-popover .fc-header{
+    background-color: #8968cd;
+    color: black;
+    font-family: 'Nunito';
+}
 td,
 tr,th {
     padding: 5px 0 5px 10px;
