@@ -38,9 +38,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         };
 
         const sheets = [
-            { title: 'Bảng A', range: 'B2:L31', targetLeft: 'team-left-A-', targetRight: 'team-right-A-' },
-            { title: 'Bảng B', range: 'B2:L31', targetLeft: 'team-left-B-', targetRight: 'team-right-B-' },
-            { title: 'Bảng C', range: 'B2:L31', targetLeft: 'team-left-C-', targetRight: 'team-right-C-' },
+            { title: 'Bảng A', range: 'B2:L101', targetLeft: 'team-left-A-', targetRight: 'team-right-A-' },
+            { title: 'Bảng B', range: 'B2:L101', targetLeft: 'team-left-B-', targetRight: 'team-right-B-' },
         ];
 
         const SHEET_ID = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU';
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             
             const leftPromises = [];
             const rightPromises = [];
-            for (let i = 0; i < 3; i++) {
+            for (let i = 0; i < 10; i++) {
                 leftPromises.push(fetchAndCreateTableRows(fullURL, i * 10, `${sheet.targetLeft}${i + 1}`));
                 rightPromises.push(fetchAndCreateTableRows(fullURL, (i * 10) + 5, `${sheet.targetRight}${i + 1}`));
             }

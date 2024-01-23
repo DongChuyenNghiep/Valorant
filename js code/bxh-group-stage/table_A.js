@@ -1,6 +1,6 @@
 let SHEET_ID = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU';
 let SHEET_TITLE = 'BXH';
-let SHEET_RANGE_A_1 = 'A1:J3';
+let SHEET_RANGE_A_1 = 'A1:J5';
 
 let FULL_URL_TABLE_A = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_A_1}`;
 

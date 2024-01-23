@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
   let SHEET_TITLE_QUALIFIER = 'Fixture';
-  let SHEET_RANGE_A = 'A2:U4';
+  let SHEET_RANGE_A = 'A2:U11';
   let SHEET_ID = '1QggU0zafsVUpV7f-YDYHg5jAfxKAMWZgk57JZSvCVuU';
   let FULL_URL_A_1 = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE_QUALIFIER}&range=${SHEET_RANGE_A}`;
   

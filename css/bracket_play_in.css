@@ -186,7 +186,7 @@ div.cac-vong a:hover::after{
 }
 
 .winner-bracket .round .winners>div.connector .line {
-  border-bottom: thin solid #5800bc;
+  border-bottom: thin solid white;
   height: 64px;
 }
 
@@ -203,7 +203,7 @@ div.cac-vong a:hover::after{
   width: 100%;
   height: 50%;
   border: 0 solid;
-  border-color: #5800bc;
+  border-color: white;
 }
 
 .winner-bracket .round .winners>div.connector .merger:before {

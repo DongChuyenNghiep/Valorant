@@ -114,6 +114,9 @@ table.my-table {
     justify-content: center;
 
 }
+table.my-table td{
+    width: 8%;
+}
 
 .team-name{
     text-align: center;
@@ -205,7 +208,7 @@ table.my-table td:nth-child(1) {
 
 table.my-table td:nth-child(2) {
     text-align: left;
-    width: 17%;
+    
 }
 img.agent-pick{
     width: 50px;
@@ -219,7 +222,8 @@ table.my-table img{
 }
 p.kda{
     text-align: center;
-    margin-bottom: 3px;
+    margin-bottom: 15px;
+    margin-top: 10px;
 }
 p.team-name{
     padding-top: 15px;
@@ -831,7 +835,7 @@ h3 {
     }
 }
 
-@media screen and (max-width:765.98px) {
+@media screen and (max-width:765.98px) and (min-width:425px) {
     a.disabled {
         position: static;
     }
@@ -1036,5 +1040,10 @@ h3 {
         font-size: 24px;
         padding: 6px;
         border-radius: 6px;
+    }
+}
+@media screen and (max-width:425px) {
+    .wordBox1 table{
+        width: 400%;
     }
 }

@@ -1,5 +1,5 @@
 
-let SHEET_RANGE_B_1 = 'D1:F3';
+let SHEET_RANGE_B_1 = 'D1:F5';
 
 let FULL_URL_TABLE_B = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_B_1}`;
 
