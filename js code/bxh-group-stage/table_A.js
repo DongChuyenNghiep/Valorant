@@ -5,14 +5,14 @@ let SHEET_RANGE_A_1 = 'A1:J5';
 let FULL_URL_TABLE_A = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_A_1}`;
 
 fetch(FULL_URL_TABLE_A)
-    .then((res) => res.text())
-    .then((rep) => {
-        let data = JSON.parse(rep.substr(47).slice(0, -2));
-        let dataBody = document.getElementById('table_ranktable_A');
-        for (let i = 0; i < data.table.rows.length; i++) {
-            let rowData = data.table.rows[i].c;
+.then((res) => res.text())
+.then((rep) => {
+    let data = JSON.parse(rep.substr(47).slice(0, -2));
+    let dataBody = document.getElementById('table_ranktable_A');
+    for (let i = 0; i < data.table.rows.length; i++) {
+        let rowData = data.table.rows[i].c;
 let row = document.createElement('tr');
-
+let cell1 = document.createElement('td');
 let cell2 = document.createElement('td');
 let cell3 = document.createElement('td');
 let cell4 = document.createElement('td');
@@ -23,28 +23,29 @@ let cell8 = document.createElement('td');
 let cell9 = document.createElement('td');
 
 // Assuming rowData[0].v contains the source URL for the image
-let imageSrcA = rowData[0].v;
+let imageSrcB = rowData[0].v;
 const regex = /\/d\/(.+?)\/view/;
-const logoteamA = imageSrcA.match(regex);
-const fileIdA = logoteamA[1];
+const logoteamB = imageSrcB.match(regex);
+const fileIdB = logoteamB[1];
 let image = document.createElement('img');
-image.src = `https://drive.google.com/thumbnail?id=${fileIdA}`;
+image.src = `https://drive.google.com/thumbnail?id=${fileIdB}`;
 image.classList.add('team-logo')
 
+cell1.appendChild(image); // Append the img element to cell1
 function updateTextContentA() {
-    if (window.innerWidth > 768) {
-      cell2.textContent = rowData[1].v;
+if (window.innerWidth > 768) {
+  cell2.textContent = rowData[1].v;
 
-    } else {
+} else {
 
-        cell2.textContent = rowData[2].v;
-    }
-  }
-  // Initial setup based on window width
-  updateTextContentA();
+    cell2.textContent = rowData[2].v;
+}
+}
+// Initial setup based on window width
+updateTextContentA();
 
-  // Update text content on window resize
-  window.addEventListener('resize', updateTextContentA);
+// Update text content on window resize
+window.addEventListener('resize', updateTextContentA);
 cell3.textContent = rowData[3].v;
 cell4.textContent = rowData[4].v;
 cell5.textContent = rowData[5].v;
@@ -53,11 +54,12 @@ cell7.textContent = rowData[7].v;
 cell8.textContent = rowData[8].v;
 cell9.textContent = rowData[9].v;
 
-
+cell1.classList.add('first-col');
 cell2.classList.add('second-col');
+cell1.classList.add('sticky-col');
 cell2.classList.add('sticky-col');
 
-row.appendChild(image);
+row.appendChild(cell1);
 row.appendChild(cell2);
 row.appendChild(cell3);
 row.appendChild(cell4);
@@ -67,6 +69,6 @@ row.appendChild(cell7);
 row.appendChild(cell8);
 row.appendChild(cell9);
 
-            dataBody.appendChild(row);
-        }
+        dataBody.appendChild(row);
+    }
     });
