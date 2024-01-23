@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function(){
         const regex = /\/d\/(.+?)\/view/;
         const logoteam_left = imglogo_left.match(regex);
             const fileId_left = logoteam_left[1];
-            console.log(fileId_left);
         img1.src = `https://drive.google.com/thumbnail?id=${fileId_left}`; // Set the image source from the data
         img1.alt = rowData[1].v + ' Logo'; // Set the alt text based on the team name
         teamDiv1.appendChild(img1);
