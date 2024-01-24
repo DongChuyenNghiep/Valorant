@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function(){
         stat_left.classList.add('stat-left');
         let kda_left = document.createElement('p');
         kda_left.classList.add('kda');
-        kda_left.textContent = `K/D/A: ${rowData[9].v}/${rowData[11].v}/${rowData[15].v}`;
+        kda_left.textContent = `K/D/A: ${rowData[15].v}/${rowData[17].v}/${rowData[19].v}`;
         stat_left.appendChild(kda_left);
         team_left.appendChild(stat_left);
         
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function(){
         stat_right.classList.add('stat-right');
         let kda_right = document.createElement('p');
         kda_right.classList.add('kda');
-        kda_right.textContent = `K/D/A: ${rowData[10].v}/${rowData[12].v}/${rowData[16].v}`;
+        kda_right.textContent = `K/D/A: ${rowData[16].v}/${rowData[18].v}/${rowData[20].v}`;
         stat_right.appendChild(kda_right);
         team_right.appendChild(stat_right);
 
