@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', async function() {
                 let first_col = document.createElement('td');
                 first_col.appendChild(ign_col);
                 row.appendChild(first_col);
-                for (let j = 2; j < rowData.length-1; j++) {
+                for (let j = 2; j < rowData.length; j++) {
                     const cell = document.createElement('td');
                     cell.textContent = rowData[j].v;
                     row.appendChild(cell);
                 }
                 
-                row.appendChild(hs);
+                
                 dataBody.appendChild(row);
             }
         };
