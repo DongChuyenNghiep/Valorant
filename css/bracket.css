@@ -148,8 +148,10 @@ div.cac-vong a:hover::after{
 .bracket .round .winners>div.matchups .matchup .participants .participant #semi-score-2,
 .bracket .round .winners>div.matchups .matchup .participants .participant #semi-score-3,
 .bracket .round .winners>div.matchups .matchup .participants .participant #semi-score-4,
-.bracket .round .winners>div.matchups .matchup .participants .participant #score-champ-1,
-.bracket .round .winners>div.matchups .matchup .participants .participant #score-champ-2
+.bracket .round .winners>div.matchups .matchup .participants .participant #score-final-1,
+.bracket .round .winners>div.matchups .matchup .participants .participant #score-final-2,
+.round .winners>div.matchups .matchup .participants .participant #score-grandFinal-1,
+.round .winners>div.matchups .matchup .participants .participant #score-grandFinal-2
 {
   margin-left: auto;
   padding-right: 20px;
@@ -233,7 +235,7 @@ div.cac-vong a:hover::after{
 
 .bracket .round.semifinals .winners .connector .line {
   height: 147px;
-  width: 100px;
+  width: 350px;
 }
 
 .bracket .round.finals .winners .connector .merger {
@@ -249,14 +251,14 @@ div.cac-vong a:hover::after{
   
 }
 .bracket .round.finals .winners .connector .merger{
-  top:314px;
-  height: 570px;
+  top:286px;
+  height: 573px;
   
 }
 .bracket .round.finals .winners .connector .line{
-  height: 628px;
+  height: 573px;
 }
 .grand-final .winners .matchup  {
-  margin-top: -306px;
+  margin-top: -358px;
   margin-left: 120px;
 }

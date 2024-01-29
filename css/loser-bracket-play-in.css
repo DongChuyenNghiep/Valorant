@@ -138,7 +138,9 @@ h2{
 .loser-bracket .round .winners>div.matchups .matchup .participants .participant #final-lowerscore-1,
 .loser-bracket .round .winners>div.matchups .matchup .participants .participant #final-lowerscore-2,
 .loser-bracket .round .winners>div.matchups .matchup .participants .participant #score-advance-1,
-.loser-bracket .round .winners>div.matchups .matchup .participants .participant #score-advance-2
+.loser-bracket .round .winners>div.matchups .matchup .participants .participant #score-advance-2,
+.loser-bracket .round .winners>div.matchups .matchup .participants .participant #final-lowerscore-1,
+.loser-bracket .round .winners>div.matchups .matchup .participants .participant #final-lowerscore-2
 {
   margin-left: auto;
   padding-right: 20px;
@@ -220,7 +222,7 @@ h2{
 
 .loser-bracket .round.loser2 .winners .connector .line {
   height: 112px;
-  width: 172px;
+  width: 50px;
 }
 
 .loser-bracket .round.loser3 .winners .connector .line {
