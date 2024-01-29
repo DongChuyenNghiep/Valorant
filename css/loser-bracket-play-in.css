@@ -10,9 +10,7 @@ h2{
   padding-bottom: 20px;
 }
 
-body{
-  background-color: #212529 !important;
-}
+
 .loser-bracket img{
   height: 30px;
   padding-left: 10px;
@@ -51,7 +49,7 @@ div.cac-vong a:hover::after{
   position: absolute;
   white-space: nowrap;
   font-size: 0;
-  margin: 1040px 0px 0px 0px;
+  margin: 680px 0px 0px 0px;
   padding-bottom: 50px;
   padding-left: 60px;
 }
@@ -161,13 +159,13 @@ h2{
 }
 .loser-bracket .round .winners>div.connector .merger {
   box-sizing: border-box;
-  width: 0px;
+  width: 40px;
   display: inline-block;
   vertical-align: top;
 }
 .loser-bracket .round .winners>div.connector .line {
-  border-bottom: thin solid #5800bc;
-  height: 64px;
+  border-bottom: thin solid white;
+  height: 100px
 }
 
 .loser-bracket .round .winners>div.connector .merger {
@@ -180,10 +178,10 @@ h2{
   content: "";
   display: block;
   box-sizing: border-box;
-  width: 0%;
+  width: 100%;
   height: 50%;
   border: 0 solid;
-  border-color: #5800bc;
+  border-color: white;
 }
 
 .loser-bracket .round .winners>div.connector .merger:before {
@@ -213,15 +211,16 @@ h2{
 
 
 .loser-bracket .round.loser2 .winners .matchups .matchup:not(:last-child) {
-  margin-bottom: 80px;
+  margin-bottom: 128px;
 }
 
 .loser-bracket .round.loser2 .winners .connector .merger {
-  height: 178px;
+  height: 224px;
 }
 
 .loser-bracket .round.loser2 .winners .connector .line {
-  height: 89px;
+  height: 112px;
+  width: 172px;
 }
 
 .loser-bracket .round.loser3 .winners .connector .line {
