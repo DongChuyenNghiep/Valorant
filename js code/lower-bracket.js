@@ -1,4 +1,4 @@
-let SHEET_RANGE_LOWER = 'A9:O16';
+let SHEET_RANGE_LOWER = 'A9:Q16';
 
 let FULL_URL_LOWER= `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE_LOWER}`;
 
@@ -204,5 +204,15 @@ fetch(FULL_URL_LOWER)
       if (groupO[0] == 3){
         grandFinalteam2.classList.add('winner');
       }
+      let groupP = [
+        jsonData.table.rows[0]?.c[15]?.v ?? null
+      ]
+      let groupQ = [
+        jsonData.table.rows[0]?.c[16]?.v ?? null
+      ]
+      let teamImageChampion = document.getElementById("champion1st");
+      let teamnameChampion = document.getElementById("teamgrandChampion");
+      teamImageChampion.src = groupP[0];
+      teamnameChampion.textContent = groupQ[0];
         
     })
