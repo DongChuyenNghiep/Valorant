@@ -96,10 +96,10 @@ div.cac-vong a:hover::after{
 
 .bracket .round .winners>div.matchups .matchup .participants .participant.winner {
   color: white;
-  border-color: rgba(255, 191, 0, 0.918);
+  border-color: rgba(255, 191, 0, 1.918);
 }
 .bracket .round .winners>div.matchups .matchup .participants .participant.winner .score{
-  color: rgba(255, 191, 0, 0.918);
+  color: rgba(255, 191, 0, 1.918);
 }
 .bracket .round .winners>div.matchups .matchup .participants .participant.loser {
   background-color: rgb(251, 71, 71);
