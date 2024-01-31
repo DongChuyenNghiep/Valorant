@@ -144,13 +144,15 @@ table.my-table {
 
 }
 .bxh table {
-    margin: 10px auto 0;
+    margin: 0 auto ;
     width: 95%;
     text-align: center;
     justify-content: center;
 
 }
-
+.bxh table th{
+    padding: 12px 0 12px 10px !important;
+}
 table.my-table td{
     width: 8%;
 }
