@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .pagination li {
+            margin-right: 10px;
+        }
+
+        .pagination a {
+            text-decoration: none;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .pagination a:hover {
+            background-color: #0056b3;
+        }
+
+        .pagination a.active {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<table id="leaderboard">
+    <thead>
+        <tr>
+            <th class="sort-indicator" onclick="sortTable(0)">Rank</th>
+            <th class="sort-indicator" onclick="sortTable(1)">Name</th>
+            <th class="sort-indicator" onclick="sortTable(2)">Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Player 1</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Player 2</td>
+            <td>900</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Player 3</td>
+            <td>800</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Player 4</td>
+            <td>750</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Player 5</td>
+            <td>700</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Player 6</td>
+            <td>650</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Player 7</td>
+            <td>1400</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Player 8</td>
+            <td>670</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Player 9</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Player 10</td>
+            <td>150</td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </tbody>
+</table>
+
+<div id="pagination-container">
+    <ul class="pagination">
+        <!-- Pagination links will be added dynamically using JavaScript -->
+    </ul>
+</div>
+
+<script>
+        const table = document.getElementById('leaderboard');
+    const tbody = table.querySelector('tbody');
+    const itemsPerPage = 5;
+    const totalPages = Math.ceil(tbody.rows.length / itemsPerPage);
+    let currentPage = 1;
+    let originalRows = Array.from(tbody.rows);
+
+    // Function to show the specified page
+    function showPage(page) {
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const rowsToDisplay = originalRows.slice(startIndex, endIndex);
+
+        tbody.innerHTML = ''; // Clear existing rows
+
+        rowsToDisplay.forEach(row => {
+            tbody.appendChild(row.cloneNode(true));
+        });
+    }
+
+    // Function to sort the table data
+    function sortTable(columnIndex) {
+    var x, y, shouldSwitch, dir, switchcount = 0;
+    var rows = originalRows.slice(); // Create a copy of originalRows
+    dir = "asc";
+
+    shouldSwitch = false;
+
+    for (let i = 0; i < (rows.length - 1); i++) {
+        x = parseFloat(rows[i].getElementsByTagName("td")[columnIndex].innerText);
+        y = parseFloat(rows[i + 1].getElementsByTagName("td")[columnIndex].innerText);
+
+        if (dir === "asc" ? x > y : x < y) {
+            shouldSwitch = true;
+            [rows[i], rows[i + 1]] = [rows[i + 1], rows[i]]; // Swap rows
+            switchcount++;
+        }
+    }
+
+    // Toggle the sorting direction indicator only when the header is clicked
+    if (shouldSwitch) {
+        var headers = table.getElementsByTagName("th");
+        var indicators = document.querySelectorAll('.sort-indicator');
+        for (var j = 0; j < headers.length; j++) {
+            headers[j].classList.remove("asc", "desc");
+            indicators[j].innerHTML = '';
+        }
+        headers[columnIndex].classList.toggle("asc", dir === "asc");
+        headers[columnIndex].classList.toggle("desc", dir === "desc");
+        indicators[columnIndex].innerHTML = (dir === "desc") ? ' ▼' : ' ▲';
+    }
+
+    // Update the originalRows with the sorted data
+    originalRows = rows;
+
+    // Display the appropriate page after sorting
+
+}
+    showPage(currentPage);
+    generatePaginationLinks();
+    highlightCurrentPage();
+</script>
+
+</body>
+</html>

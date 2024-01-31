@@ -3,37 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Shadow</title>
+    <title>Sortable Table</title>
     <style>
         table {
             border-collapse: collapse;
             width: 100%;
+            margin-top: 20px;
         }
 
-        td {
-            padding: 10px;
-            text-align: center;
-            position: relative;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
         }
 
-        td::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 10px; /* Adjust the shadow width as needed */
-            background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+        th {
+            cursor: pointer;
         }
+
     </style>
 </head>
 <body>
-    <table>
+
+<table id="myTable">
+    <thead>
         <tr>
-            <td>Cell 1</td>
-            <td>Cell 2</td>
-            <td>Cell 3</td>
+            <th onclick="sortTable(0)">Column 1<span class="sort-indicator"></span></th>
+            <th onclick="sortTable(1)">Column 2<span class="sort-indicator"></span></th>
+            <th onclick="sortTable(2)">Column 3<span class="sort-indicator"></span></th>
         </tr>
-    </table>
+    </thead>
+    <tbody>
+        <tr>
+            <td>10</td>
+            <td>5</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>15</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>8</td>
+            <td>12</td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </tbody>
+</table>
+
+<script>
+    function sortTable(columnIndex) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("myTable");
+        switching = true;
+        dir = "asc";
+
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = parseFloat(rows[i].getElementsByTagName("td")[columnIndex].innerText);
+                y = parseFloat(rows[i + 1].getElementsByTagName("td")[columnIndex].innerText);
+
+                if (dir === "asc" ? x > y : x < y) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount++;
+            } else {
+                if (switchcount === 0 && dir === "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+
+        // Toggle the sorting direction indicator
+        var headers = table.getElementsByTagName("th");
+        var indicators = document.querySelectorAll('.sort-indicator');
+        for (var j = 0; j < headers.length; j++) {
+            headers[j].classList.remove("asc", "desc");
+            indicators[j].innerHTML = '';
+        }
+        headers[columnIndex].classList.toggle("asc", dir === "asc");
+        headers[columnIndex].classList.toggle("desc", dir === "desc");
+        indicators[columnIndex].innerHTML = (dir === "asc") ? ' ▲' : ' ▼';
+    }
+</script>
+
 </body>
 </html>
