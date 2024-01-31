@@ -56,6 +56,16 @@ button.filter-table {
     justify-content: space-between;
 }
 
+.bxh table tbody tr:first-child, .bxh table tbody tr:first-child td{
+    background-color: #D2AF26 !important;
+    border: none;
+}
+.bxh table tbody tr:first-child, .bxh table tbody tr:nth-child(2) td{
+    background-color: #BFBDBC !important;
+}
+.bxh table tbody tr:first-child, .bxh table tbody tr:nth-child(3) td{
+    background-color:  #a05822 !important;
+}
 .nav2 {
     background-color: #031840;
     top: 80px;
